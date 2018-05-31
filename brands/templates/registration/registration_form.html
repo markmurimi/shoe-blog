@@ -1,5 +1,6 @@
 {%extends "registration/base.html"%} {% load bootstrap3 %}
 {% block content %}
+<body style="background-color: black">
 <div class="container">
   <div class="row">
     <!-- Empty div -->
@@ -8,18 +9,21 @@
       {% if form.errors %}
         <p> Some Information Might be Incorrect </p>
       {% endif %}
-      <div class="panel panel-default">
+      <div style="margin:-150px;margin-top:40px;background-color: black;color:white" class="panel panel-default">
 
         <div class="panel-heading">
-          <h3 class="text-center">Sign Up</h3>
+          <h3 class="text-center"><b>Sign Up</b></h3>
         </div>
         <div class="panel-body">
 
           <form  action="/accounts/register/" method="post">
             {% csrf_token %}
-            {% bootstrap_form form %}
+            {% bootstrap_form form layout='inline' %}
             <div class="form-group">
               <input type="submit" class="btn btn-primary btn-sm" value="Sign Up">
+              <a href="/accounts/login">
+                <button type="button" class="btn btn-primary" name="button">Back</button>
+            </a>
             </div>
 
             <input type="hidden" name="next" value="{{next}}">
@@ -34,6 +38,7 @@
     <!-- empty div -->
     <div class="col-md-4"></div>
   </div>
+  
 </div>
-
+</body>
 {% endblock %}
