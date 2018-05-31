@@ -5,31 +5,34 @@
 <head>
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-        <link href="./static/css/aos.css"rel="stylesheet"type="text/css">
+        <link href="../static/css/aos.css"rel="stylesheet"type="text/css">
         <script src="bower_components/aos/dist/aos.js"></script>
-        <script src="./static/js/aos.js" charset="utf-8"></script>
+        <script src="../static/js/aos.js" charset="utf-8"></script>
 </head>
 <body style="background-color: black;font-family:'Raleway', sans-serif;">
     <div class="container-fluid">
-    <div class="container-fluid" style="border-radius:25px;background-image: url('https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&h=350');background-repeat: no-repeat;background-size:200vh">
-        <div  style="border-radius:25px;margin:20%;text-align: center;opacity:0.6;"class="well">
+    <div data-aos="zoom-in" data-aos-duration="1300" class="container-fluid" style="border-radius:25px;background-image: url('https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&h=350');background-repeat: no-repeat;background-size:200vh">
+        <div data-aos="fade-up" data-aos-duration="1600" style="border-radius:25px;margin:20%;text-align: center;opacity:0.6;"class="well">
             <h1 style="text-decoration:underline">Casual Shoes</h1>
         </div>
     </div>
-    <div class="container-fluid" style="margin-top:1%;border-radius:25px;margin-right:30%;background-image: url('https://images.pexels.com/photos/415261/pexels-photo-415261.jpeg?auto=compress&cs=tinysrgb&h=350');background-repeat: no-repeat;background-size:200vh">
-        <div  style="border-radius:25px;margin:20%;text-align: center;opacity:0.6;"class="well">
+    <div data-aos="fade-right" data-aos-duration="1500" class="container-fluid" style="margin-top:1%;border-radius:25px;margin-right:30%;background-image: url('https://images.pexels.com/photos/415261/pexels-photo-415261.jpeg?auto=compress&cs=tinysrgb&h=350');background-repeat: no-repeat;background-size:200vh">
+        <div data-aos="fade-up-left" data-aos-duration="1300" style="border-radius:25px;margin:20%;text-align: center;opacity:0.6;"class="well">
             <h1 style="text-decoration:underline">Training Shoes</h1>
         </div>
     </div>
-    <div style="border-radius:25px;margin-right:-0.6%;float:right;width:29%;padding:5%;text-align:center;margin-top:-33%;background-color: whitesmoke;"class="container">
+    <div data-aos="fade-left" data-aos-duration="1300" style="border-radius:25px;margin-right:-0.6%;float:right;width:29%;padding:5%;text-align:center;margin-top:-33%;background-color: whitesmoke;"class="container">
             <h1></h1>
         </div>
-    <div class="container-fluid" style="margin-top:1%;border-radius:25px;background-image: url('https://images.pexels.com/photos/631988/pexels-photo-631988.jpeg?auto=compress&cs=tinysrgb&h=350');background-repeat: no-repeat;background-size:200vh">
-            <div  style="border-radius:25px;margin:20%;text-align: center;opacity:0.6;"class="well">
+    <div data-aos="fade-up" data-aos-duration="1300" class="container-fluid" style="margin-top:1%;border-radius:25px;background-image: url('https://images.pexels.com/photos/631988/pexels-photo-631988.jpeg?auto=compress&cs=tinysrgb&h=350');background-repeat: no-repeat;background-size:200vh">
+            <div data-aos="fade-down-right" data-aos-duration="1300" style="border-radius:25px;margin:20%;text-align: center;opacity:0.6;"class="well">
                 <h1 style="text-decoration:underline">Hiking Shoes</h1>
             </div>
         </div>
     </div>
 </div>
 </body>
+<script>
+        AOS.init();
+      </script>
 {% endblock %}
