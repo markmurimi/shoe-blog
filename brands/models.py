@@ -6,7 +6,7 @@ class Brand(models.Model):
     brand_details = models.TextField()
     brand_owner = models.CharField(max_length = 30)
     brand_origin = models.CharField(max_length = 30)
-    release = models.CharField(max_length =30)
+    release_date = models.CharField(max_length =30)
 
     def __str__(self):
         return self.brand_name
@@ -27,7 +27,7 @@ class Post(models.Model):
     price = models.IntegerField()
     brand = models.ForeignKey('Brand')
     profile = models.ForeignKey('Profile')
-    released = models.CharField(max_length =30)
+    released_date = models.CharField(max_length =30)
     
     def __str__(self):
         return self.name   

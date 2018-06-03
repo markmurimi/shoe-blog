@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Post,Profile,Brand
+from .forms import PostForm
 
 # Create your views here.
 def welcome(request):
@@ -40,7 +41,7 @@ def new_post(request):
             post = form.save(commit=False)
             post.user = current_user
             post.save()
-            return redirect(profile)
+            return redirect(home)
     else:
         form = PostForm()
     return render(request, 'new-post.html', {"form": form})

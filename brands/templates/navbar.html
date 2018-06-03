@@ -12,9 +12,10 @@
       <a style="color:white;font-size:20px;" href="/home">Home</a>
       <a style="color:white;font-size:20px;" href="/accounts/password/change">Change Password</a>
       <a style="color:white;font-size:20px;" href="/accounts/login">Logout</a>
-      <a style="color:white;font-size:20px;" href=""
-
+      <a style="color:white;font-size:20px;" href="{% url 'postImage' %}">New Post</a>  
       </div>
+      
+
       <div class="col-sm-4 col-md-4 navbar-left" style="margin-bottom:0.2%;">
 
         <form  class="navbar-form" role="search" action="{% url 'search_results' %}">

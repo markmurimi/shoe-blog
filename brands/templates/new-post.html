@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% load static%} {% load bootstrap3 %}
+
+
+<!-- Styles block -->
+{% block styles %} {{block.super}}
+<link rel="stylesheet" href="{% static 'css/new-post.css'%}"> {% endblock %}
+
+<!-- Content block -->
+{% block content %} {{block.super}}
+<div class="container">
+
+    <!-- Create Post form -->
+    <div class="col-md-8 col-lg-8">
+        <form action="{% url 'postImage'%}" method="post" enctype="multipart/form-data">
+            {% csrf_token %} {% bootstrap_form form %}
+            <input type="submit" class="btn btn-success btn-lg" value="Post">
+            <a href="/home">
+                <button type="button" class="btn btn-primary" name="button">Back</button>
+            </a>        
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
