@@ -25,3 +25,22 @@ def brandDetails(request, brand_id):
     posts = Post.objects.filter(brand= brand_id).all()
     print(posts)
     return render(request, 'brand-details.html', {"posts": posts})
+
+def new_post(request):
+    '''
+    View function to display a form for creating a post to a logged in authenticated user
+    '''
+    current_user = request.user
+
+    if request.method == 'POST':
+
+        form = PostForm(request.POST, request.FILES)
+
+        if form.is_valid:
+            post = form.save(commit=False)
+            post.user = current_user
+            post.save()
+            return redirect(profile)
+    else:
+        form = PostForm()
+    return render(request, 'new-post.html', {"form": form})
