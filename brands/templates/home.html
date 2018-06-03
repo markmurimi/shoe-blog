@@ -29,16 +29,25 @@
                 <h1 style="text-decoration:underline">Hiking Shoes</h1>
             </div>
         </div>
-        <div style="margin-left:30%;margin-right:30%;margin-top:1%;text-align:center;opacity:0.7;" class="well">
+        <div data-aos="fade-down" data-aos-duration="1300" style="margin-left:30%;margin-right:30%;margin-top:1%;text-align:center;opacity:0.7;" class="well">
             <h1 style="text-decoration:underline;">TRENDING.</h1>
         </div>
 {% for images_item in images %}
-        <div style="background-color:whitesmoke;padding:1.5%;border-radius:15px;opacity:0.7;margin-right:70%;width:1500px;padding-bottom:20%;" class="container">
+        <div data-aos="fade-left" data-aos-duration="1300"style="background-color:whitesmoke;padding:1.5%;border-radius:15px;opacity:0.7;margin-right:70%;width:1500px;padding-bottom:3%;" class="container">
                 <h1 style="padding-left:5px;padding-right:20px;margin-top:-10px;margin-bottom:-13px;font-weight:bolder;"><img style="width:100px;height:90px;border-radius:118px" src="{{images_item.profile.profile_pic.url}}">{{images_item.profile.name}}</h1>
-            <img  style="margin-left:41%;width:60%;margin-top:-4%;" src="{{images_item.picture.url}}">
-            <h1 style="color:black;margin-top:-33%;margin-right:60%;text-decoration: underline">{{images_item.name}}</h1>
+            <img  style="margin-left:41%;width:60%;margin-top:-4%;border-radius:20px;" src="{{images_item.picture.url}}">
+            <h1 style="color:black;margin-top:-33%;margin-right:60%;text-decoration: underline">{{images_item.name}}.</h1>
             <hr>
-            <h2 style="color:black;margin-top:-1%;margin-right:60%;">{{images_item.post_caption}}</h2> 
+            <h2 style="color:black;margin-top:-1%;margin-right:60%;">{{images_item.post_caption}}.</h2>
+            <br>
+            <h1 style="color:black;margin-top:-1%;margin-right:60%;text-decoration: underline">Brand.</h1>
+            <h2 style="color:black;margin-top:0%;margin-right:60%;">{{images_item.brand.brand_name}}.</h2>
+            <br>
+            <h1 style="color:black;margin-top:-1%;margin-right:60%;text-decoration: underline">Price.</h1>
+            <h2 style="color:black;margin-top:0%;margin-right:60%;">{{images_item.price}} kshs.</h2>
+            <br>
+            <h1 style="color:black;margin-top:-1%;margin-right:60%;text-decoration: underline">Release Date.</h1>
+            <h2 style="color:black;margin-top:0%;margin-right:60%;">{{images_item.released}}.</h2>
         </div>
 {% empty %}
         <div style="background-color:whitesmoke;padding:1.5%;border-radius:15px;opacity:0.7;margin-right:70%;width:800px;padding-bottom:11%;margin-left:51.5%;margin-top:-21%;" class="container">

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post,Profile
+from .models import Post,Profile,Brand
 
 # Create your views here.
 def welcome(request):
