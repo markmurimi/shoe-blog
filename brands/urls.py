@@ -7,6 +7,8 @@ urlpatterns=[
     url(r'^$',views.welcome,name = 'welcome'),
     url(r'^home/',views.home,name = 'home'),
     url(r'^search_results/', views.search_results, name='search_results'),
+    url(r'^brandDetails/(?P<brand_id>[0-9]+)/$', views.brandDetails, name= 'brandDetails'),
+
 
 ]
 if settings.DEBUG:

@@ -20,3 +20,8 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'search-results.html',{"message":message})
+
+def brandDetails(request, brand_id):
+    posts = Post.objects.filter(brand= brand_id).all()
+    print(posts)
+    return render(request, 'brand-details.html', {"posts": posts})

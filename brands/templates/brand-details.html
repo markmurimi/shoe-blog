@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{% load staticfiles%} 
+{% load bootstrap3 %} 
+{%block content%}
+    {% for post in posts %}
+    <div data-aos="fade-left" data-aos-duration="1300"style="background-color:whitesmoke;padding:1.5%;border-radius:15px;opacity:0.7;margin-right:70%;margin-left:6%;width:1500px;padding-bottom:2%;" class="container">
+    <h1 style="color:black;margin-right:60%;text-decoration: underline">Brand.</h1>
+    <h2 style="color:black;margin-right:60%;">{{post.brand.brand_name}}.</h2>
+    <br>
+    <h1 style="color:black;margin-top:-1%;margin-right:60%;text-decoration: underline">Details.</h1>
+    <h2 style="color:black;margin-right:20%;">{{post.brand.brand_details}}</h2>
+    <br>
+    <h1 style="color:black;margin-top:-1%;margin-right:60%;text-decoration: underline">Was Created On</h1>
+    <h2 style="color:black;margin-right:60%;">{{post.brand.release}}.</h2>
+    <br>
+    <h1 style="color:black;margin-top:-1%;margin-right:60%;text-decoration: underline">Origin.</h1>
+    <h2 style="color:black;margin-right:60%;">{{post.brand.brand_origin}}.</h2>
+    <br>
+    <h1 style="color:black;margin-top:-1%;margin-right:60%;text-decoration: underline">Posts.</h1>
+    <img  style="width:60%;height:580px;border-radius:20px;" src="{{post.picture.url}}">
+
+</div>
+<br>
+<br>
+<br>
+    {% empty %}
+    <div class="well"style="background-color:white;margin-left:20%;margin-right:21%;opacity:0.9;margin-top:2%;">
+        <h1 style="text-align: center">No Brand By That Name</h1>
+    </div>
+
+    {% endfor %}
+{% endblock %}

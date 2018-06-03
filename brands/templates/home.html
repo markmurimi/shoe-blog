@@ -53,7 +53,7 @@
         <br>
         <br>
         <div data-aos="fade-down" data-aos-duration="1600" style="background-color:whitesmoke;opacity:0.7;float:right;width:9%;margin-top:-40%;border-radius:15px;text-align: center;" class="container">
-            <a style="font-size:40px;color:black;" >{{images_item.brand.brand_name}}</a>
+            <a style="font-size:40px;color:black;" href="{% url 'brandDetails' images_item.brand.id %}" >{{images_item.brand.brand_name}}</a>
             </div>
 {% empty %}
         <div style="background-color:whitesmoke;padding:1.5%;border-radius:15px;opacity:0.7;margin-right:70%;width:800px;padding-bottom:11%;margin-left:51.5%;margin-top:-21%;" class="container">
