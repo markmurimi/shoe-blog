@@ -41,3 +41,8 @@ class Post(models.Model):
         ''' 
         images = Post.objects.all()
         return images 
+
+    @classmethod
+    def search_by_brand_name(cls,search_term):
+        images = cls.objects.filter(brand__brand_name__icontains=search_term)
+        return images

@@ -6,15 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<nav class="navbar navbar-inverse" style="background-color:whitesmoke;opacity:0.5;">
+<nav class="navbar navbar-inverse" style="background-color:black;">
 
     <div class="navbar-right" style="margin-top:0.8%;margin-bottom:0.3%;margin-right:1%;">
-       
-        <a style="color:black;font-family: sans-serif;font-size:20px;" href="/accounts/password/change">Change Password</a>
-        <a style="color:black;font-family: sans-serif;font-size:20px;" href="/accounts/login">Logout</a>
+      <a style="color:white;font-size:20px;" href="/home">Home</a>
+        <a style="color:white;font-size:20px;" href="/accounts/password/change">Change Password</a>
+        <a style="color:white;font-size:20px;" href="/accounts/login">Logout</a>
 
 
       </div>
+      <div class="col-sm-4 col-md-4 navbar-left" style="margin-bottom:0.2%;">
+
+        <form  class="navbar-form" role="search" action="{% url 'search_results' %}">
+  
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Brand" name="posts">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
+  
+        </form>
+      
+    </div>
 </nav>
 </body>
 </html>
