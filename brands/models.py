@@ -26,8 +26,18 @@ class Post(models.Model):
     post_caption = models.TextField()
     price = models.IntegerField()
     brand = models.ForeignKey('Brand')
-    Profile = models.ForeignKey('Profile')
-    post = models.CharField(max_length =30)
+    profile = models.ForeignKey('Profile')
+    released = models.CharField(max_length =30)
     
     def __str__(self):
-        return self.name    
+        return self.name   
+
+    @classmethod
+    def get_posts(cls):
+        '''
+        Method that gets all image posts from the database
+        Returns:
+            get_posts : list of image post objects from the database
+        ''' 
+        images = Post.objects.all()
+        return images 
