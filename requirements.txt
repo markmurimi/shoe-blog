@@ -1,8 +1,12 @@
 confusable-homoglyphs==3.1.1
+dj-database-url==0.5.0
 Django==1.11
 django-bootstrap3==10.0.1
+django-heroku==0.3.1
 django-registration==2.4.1
 gunicorn==19.8.1
 Pillow==5.1.0
+pkg-resources==0.0.0
 psycopg2==2.7.4
 pytz==2018.4
+whitenoise==3.3.1
