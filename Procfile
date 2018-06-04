@@ -1,0 +1,1 @@
+web: gunicorn shoes.wsgi --log-file -

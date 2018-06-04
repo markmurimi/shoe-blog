@@ -7,6 +7,8 @@ class Brand(models.Model):
     brand_owner = models.CharField(max_length = 30)
     brand_origin = models.CharField(max_length = 30)
     release_date = models.CharField(max_length =30)
+    profile = models.ForeignKey('Profile', null=True)
+
 
     def __str__(self):
         return self.brand_name
