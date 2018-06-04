@@ -33,10 +33,10 @@
             <h1 style="text-decoration:underline;">TRENDING.</h1>
         </div>
 {% for images_item in images %}
-        <div data-aos="fade-left" data-aos-duration="1300"style="background-color:whitesmoke;padding:1.5%;border-radius:15px;opacity:0.7;margin-right:70%;width:1500px;padding-bottom:2%;" class="container">
+        <div data-aos="fade-left" data-aos-duration="1300"style="background-color:whitesmoke;padding:1.5%;border-radius:15px;opacity:0.7;margin-right:70%;width:1100px;padding-bottom:2%;" class="container">
                 <h1 style="padding-left:5px;padding-right:20px;margin-top:-10px;margin-bottom:-13px;font-weight:bolder;"><img style="width:100px;height:90px;border-radius:118px" src="{{images_item.profile.profile_pic.url}}">{{images_item.profile.name}}</h1>
             <img  style="margin-left:41%;width:60%;height:580px;margin-top:-4%;border-radius:20px;" src="{{images_item.picture.url}}">
-            <h1 style="color:black;margin-top:-33%;margin-right:60%;text-decoration: underline">{{images_item.name}}.</h1>
+            <h1 style="color:black;margin-top:-48%;margin-right:60%;text-decoration: underline">{{images_item.name}}.</h1>
             <hr>
             <h2 style="color:black;margin-top:-1%;margin-right:60%;">{{images_item.post_caption}}.</h2>
             <br>
@@ -52,7 +52,7 @@
         <br>
         <br>
         <br>
-        <div data-aos="fade-down" data-aos-duration="1600" style="background-color:whitesmoke;opacity:0.7;float:right;width:24%;margin-top:-36%;border-radius:15px;text-align: center;" class="container">
+        <div data-aos="fade-down" data-aos-duration="1600" style="background-color:whitesmoke;opacity:0.7;float:right;width:24%;margin-top:-50%;border-radius:15px;text-align: center;" class="container">
             <h1 style="font-size:60px;color:black;text-decoration: underline;">DETAILS.</h1>
             <h1 style="font-size:40px;color:black;">Name:{{images_item.brand.brand_name}}</h1>
             <h1 style="font-size:40px;color:black;">Origin:{{images_item.brand.brand_origin}}</h1>
